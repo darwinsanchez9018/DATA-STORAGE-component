@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/ds-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>FYLO DATA STORAGE component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card card-header"><img class="card-logo" src="assets/images/logo.svg" alt="LOGO">
+        <div class="card-buttons">
+          <div class="card-cta"><img src="assets/images/icon-document.svg" alt="icon-document"></div>
+          <div class="card-cta"><img src="assets/images/icon-folder.svg" alt="icon-folder"></div>
+          <div class="card-cta"><img src="assets/images/icon-upload.svg" alt="icon-upload"></div>
+        </div>
+      </div>
+      <div class="card card-storage">
+        <p class="card-text">You’ve used <strong id="usedStorage">815 GB </strong>of your storage</p>
+        <div class="progress-bar">
+          <div class="progress-bar-color">
+            <div class="progress-bar-ball"></div>
+          </div>
+        </div>
+        <div class="card-status">
+          <p class="card-text"><strong>0 GB</strong></p>
+          <p class="card-text"><strong id="maxStorage">1000 GB</strong></p>
+        </div>
+        <div class="card-message-container">
+          <div class="card-message"><strong class="card-message-num" id="freeStorage">185 </strong><span class="card-message-left">GB LEFT</span></div>
+          <div class="card-triangle"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer"><small class="copy"><img class="copy__logo" src="assets/images/ds-logo.png" alt="LOGO">
+        <div class="copy__info">© Copyright 2021 <a class="copy__link" href="https://darwinsanchez9018.github.io/Frontend-Porfolio/" target="_blank">Darwin Sánchez </a>All rights reserved.</div></small></footer>
+    <script src="js/scripts-dist.js"></script>
+  </body>
+</html>

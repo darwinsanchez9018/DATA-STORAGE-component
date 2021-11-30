@@ -1,0 +1,49 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon", href="assets/images/ds-icon.ico" type="image/x-icon")
+        link(rel="stylesheet", href="css/styles.css")
+
+        title FYLO DATA STORAGE component
+    body
+        .container
+
+            .card.card-header
+                img(src="assets/images/logo.svg", alt="LOGO").card-logo
+                .card-buttons
+                    .card-cta: img(src="assets/images/icon-document.svg", alt="icon-document")
+                    .card-cta: img(src="assets/images/icon-folder.svg", alt="icon-folder")
+                    .card-cta: img(src="assets/images/icon-upload.svg", alt="icon-upload")
+
+            .card.card-storage
+                p.card-text You’ve used 
+                    strong#usedStorage 815 GB 
+                    |of your storage
+
+                .progress-bar
+                    .progress-bar-color
+                        .progress-bar-ball
+
+                .card-status
+                    p.card-text: strong 0 GB
+                    p.card-text: strong#maxStorage 1000 GB
+
+                .card-message-container
+                    .card-message
+                        strong#freeStorage.card-message-num 185 
+                        span.card-message-left GB LEFT
+                    .card-triangle
+
+
+        footer.footer
+            small.copy
+                img(src="assets/images/ds-logo.png", alt="LOGO").copy__logo
+                .copy__info © Copyright 2021 
+                    a(href="https://darwinsanchez9018.github.io/Frontend-Porfolio/" target="_blank").copy__link Darwin Sánchez 
+                    |All rights reserved.
+
+
+        script(src="js/scripts-dist.js")

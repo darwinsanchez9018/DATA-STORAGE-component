@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+@import "config/variables";
+@import "base/base";
+@import "mixins/reset-list";
+@import "mixins/breakpoints";
+@import "mixins/hover";
+
+@import "blocks/container";
+@import "blocks/card";
+@import "blocks/progress-bar";
+@import "blocks/footer";

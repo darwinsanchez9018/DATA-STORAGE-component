@@ -1,0 +1,124 @@
+.card {
+    margin: 0;
+    background-color: var(--blue-color);
+    width: 100%;
+    border-radius: .7rem;
+    box-shadow: 0px 5px 15px 5px var(--shadow);
+
+    //------------- Primera Tarjeta
+    &-header {
+        border-top-right-radius: 7rem;
+        overflow: hidden;
+        padding: 2.5rem;
+
+        @include tablet {
+            width: 35rem;
+        }
+    }
+
+    &-logo {
+        margin-bottom: 2rem;
+    }
+
+    &-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    &-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--dark-blue);
+        width: 45px;
+        height: 45px;
+        border-radius: .5rem;
+    }
+
+
+
+    //--------------- Segunda Tarjeta
+    &-storage {
+        padding: 2rem 2rem 2.5rem 2rem;
+        text-align: center;
+        position: relative;
+
+        @include tablet {
+            padding: 2.5rem 3rem 2rem 3rem;
+            text-align: left;
+            margin-top: 2.2rem;
+        }
+    }
+
+    &-text {
+        margin-bottom: 1rem;
+    }
+
+    &-status {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .7rem;
+    }
+
+
+
+    // Mensaje Flotante
+    &-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+
+        &-container {
+            position: absolute;
+            // display: block;
+            bottom: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--white-color);
+            border-radius: .5rem;
+            padding: .8rem 1rem;
+            width: 180px;
+
+            @include tablet {
+                transform: initial;
+                left: initial;
+                bottom: initial;
+                right: 9%;
+                top: -27%;
+            }
+        }
+
+        &-num {
+            font-size: 2.4rem;
+            color: var(--dark-blue);
+        }
+        &-left {
+            color: var(--grayish);
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .1rem;
+        }
+    }
+
+    &-triangle {
+        display: none;
+        
+        @include tablet {
+            display: initial;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: var(--white-color);
+
+            /* The points are: centered top, left bottom, right bottom */
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            margin-top: 5px;
+            right: 0;
+        }
+    }
+
+}

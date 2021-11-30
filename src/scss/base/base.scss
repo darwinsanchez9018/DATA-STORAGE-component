@@ -1,0 +1,39 @@
+@import "mixins/breakpoints";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: var(--text-font);
+    color: var(--pale-blue);
+    background-color: var(--dark-blue);
+    
+    background-image: url("../assets/images/bg-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+    @include tablet {
+        background-image: url("../assets/images/bg-desktop.png");
+        background-size: contain;
+        background-position: left bottom;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+// h1, h2, h3 {
+//     font-family: var(--text-font);
+// }

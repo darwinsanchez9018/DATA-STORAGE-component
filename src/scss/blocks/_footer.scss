@@ -1,0 +1,32 @@
+.footer {
+    margin-top: -80px;
+}
+
+
+.copy {
+    text-align: center;
+
+    &__logo {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: .5rem;
+    }
+
+    &__info {
+        color: var(--pale-blue);
+        margin-top: 1rem;
+
+    }
+    &__link {
+        text-decoration: none;
+        color: var(--pale-blue);
+        font-weight: 700;
+
+        @include hover {
+            color: var(--grayish);
+        }
+    }
+}

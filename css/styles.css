@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+:root {
+  --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish: hsl(229, 7%, 55%);
+  --blue-color: hsl(228, 56%, 28%);
+  --progress-bar:hsl(224, 61%, 15%);
+  --dark-blue: hsl(229, 57%, 11%);
+  --shadow: rgba(12, 18, 44, .5);
+  --white-color: hsl(0, 0%, 100%);
+  --text-font: "Raleway", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: var(--text-font);
+  color: var(--pale-blue);
+  background-color: var(--dark-blue);
+  background-image: url("../assets/images/bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+@media screen and (min-width: 1100px) {
+  body {
+    background-image: url("../assets/images/bg-desktop.png");
+    background-size: contain;
+    background-position: left bottom;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+@media screen and (min-width: 1100px) {
+  .container {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 0 15.6rem;
+    justify-content: baseline;
+    bottom: 0;
+  }
+}
+
+.card {
+  margin: 0;
+  background-color: var(--blue-color);
+  width: 100%;
+  border-radius: 0.7rem;
+  box-shadow: 0px 5px 15px 5px var(--shadow);
+}
+.card-header {
+  border-top-right-radius: 7rem;
+  overflow: hidden;
+  padding: 2.5rem;
+}
+@media screen and (min-width: 1100px) {
+  .card-header {
+    width: 35rem;
+  }
+}
+.card-logo {
+  margin-bottom: 2rem;
+}
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+.card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  width: 45px;
+  height: 45px;
+  border-radius: 0.5rem;
+}
+.card-storage {
+  padding: 2rem 2rem 2.5rem 2rem;
+  text-align: center;
+  position: relative;
+}
+@media screen and (min-width: 1100px) {
+  .card-storage {
+    padding: 2.5rem 3rem 2rem 3rem;
+    text-align: left;
+    margin-top: 2.2rem;
+  }
+}
+.card-text {
+  margin-bottom: 1rem;
+}
+.card-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+.card-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.card-message-container {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  width: 180px;
+}
+@media screen and (min-width: 1100px) {
+  .card-message-container {
+    transform: initial;
+    left: initial;
+    bottom: initial;
+    right: 9%;
+    top: -27%;
+  }
+}
+.card-message-num {
+  font-size: 2.4rem;
+  color: var(--dark-blue);
+}
+.card-message-left {
+  color: var(--grayish);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.card-triangle {
+  display: none;
+}
+@media screen and (min-width: 1100px) {
+  .card-triangle {
+    display: initial;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white-color);
+    /* The points are: centered top, left bottom, right bottom */
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+    margin-top: 5px;
+    right: 0;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--progress-bar);
+  padding: 2px;
+}
+.progress-bar-color {
+  width: 75%;
+  background-image: var(--gradient);
+  background-color: red;
+  padding: 0.1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 1rem;
+}
+.progress-bar-ball {
+  background-color: var(--pale-blue);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+}
+
+.footer {
+  margin-top: -80px;
+}
+
+.copy {
+  text-align: center;
+}
+.copy__logo {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+}
+.copy__info {
+  color: var(--pale-blue);
+  margin-top: 1rem;
+}
+.copy__link {
+  text-decoration: none;
+  color: var(--pale-blue);
+  font-weight: 700;
+}
+@media (hover: none) {
+  .copy__link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .copy__link:active {
+    color: var(--grayish);
+  }
+}
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover: hover) {
+  .copy__link:hover {
+    color: var(--grayish);
+  }
+}
